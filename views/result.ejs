@@ -1,0 +1,21 @@
+
+<center>
+	<h1>Your Search Results</h1>
+	<h4><a href="/">Search Again</a></h4>
+
+		<table style="border:1px solid black;">
+		<% results["Search"].forEach(function(movie){ %>
+			<tr>
+				<td>
+				    <span style="float:right;"><strong><%= movie["Title"]%></strong></span>
+				</td>
+				<td>
+					<span style="float:right;">- <%= movie["Year"]%></span>
+				</td>
+				<td>
+					<img src="<%= movie["Poster"] %>" style="height:50%;width:50%;float:right;">
+				</td>
+			</tr>
+		<% }); %>
+		</table>
+</center>
